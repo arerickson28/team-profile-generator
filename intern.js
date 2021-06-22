@@ -10,12 +10,12 @@ class Intern extends Employee {
     }
 
     getSchool() {
-        console.log(this.school)
+        return this.school
     }
 
     getRole() {
         super.getRole() 
-        console.log("Intern") ;
+        return "Intern" ;
     }
 }
 

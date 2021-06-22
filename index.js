@@ -4,7 +4,7 @@ const Employee = require("./employee") ;
 const Manager = require("./manager") ;
 const Engineer = require("./engineer") ;
 const Intern = require("./intern") ;
-// const generateHTML = require("./generateHTML") ;
+const generateHTML = require("./generateHTML") ;
 
 // let myEngineer = new Engineer("Rhyce", "47", "a.r.erickson.28@gmail.com", "arerickson28") ;
 
@@ -42,9 +42,9 @@ function addManager() {
         }
     ]).then((res) =>{
         // console.log(res)
-        // let manager = new Manager(res.name, res.id, res.email, res.officenumber) ;
+        let manager = new Manager(res.name, res.id, res.email, res.officenumber) ;
         // console.log(manager)
-        data.push(res)
+        data.push(manager)
         console.log(data)
         createNew()
     })
@@ -74,9 +74,9 @@ function addEngineer() {
         }
     ]).then((res) =>{
         // console.log(res)
-        // let engineer = new Engineer(res.name, res.id, res.email, res.github) ;
+        let engineer = new Engineer(res.name, res.id, res.email, res.github) ;
         // console.log(engineer)
-        data.push(res)
+        data.push(engineer) ;
         console.log(data)
         createNew()
     })
@@ -107,9 +107,9 @@ function addIntern() {
         }
     ]).then((res) =>{
         // console.log(res)
-        // let intern = new Intern(res.name, res.id, res.email, res.school) ;
+        let intern = new Intern(res.name, res.id, res.email, res.school) ;
         // console.log(engineer)
-        data.push(res)
+        data.push(intern)
         console.log(data)
         createNew()
     })
@@ -153,15 +153,12 @@ function createNew() {
         }
         else {
             console.log("You chose NOT to add another employee") ;
-            // writeToFile("team.html", generateHTML(data))
+            writeToFile("team.html", generateHTML(data))
         }
     })
 }
 
-function writeToFile(filename, res) {
-    fs.writeFile(filename, res, (err) => 
-    err ? console.log(err) : console.log("Successfully created HTML"))
-}
+
 
 
 createNew() ;
