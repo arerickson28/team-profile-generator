@@ -14,7 +14,7 @@ let data = [];
 
 function writeToFile(filename, data) {
     fs.writeFile(filename, data, (err) => 
-    err ? console.log(err) : console.log("Successfully created README.md"))
+    err ? console.log(err) : console.log("Successfully created HTML file"))
 }
 
 

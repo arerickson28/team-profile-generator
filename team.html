@@ -1,17 +1,4 @@
-const Engineer = require("./engineer");
-const Intern = require("./intern");
-const Manager = require("./manager");
-
-
-
-
-
-
-
-
-function generateHTML(data) {
-
-    let teamHTML = `<!DOCTYPE html>
+<!DOCTYPE html>
         <html lang="en">
         <head>
             <meta charset="UTF-8">
@@ -79,65 +66,39 @@ function generateHTML(data) {
             </div>
             
 
-        <section id="teamCards">`
-
-
-        function makeEmployeeCard(name, id, email, role, pClass, extraType, extra) {
-            let card =  `<div class="card" style="width: 18rem;">
+        <section id="teamCards"><div class="card" style="width: 18rem;">
             <div class="card-header">
-              ${name}
+              Ashley
               <br>
-              <span class="${pClass}"> ${role}</span>
+              <span class="manager"> Manager</span>
             </div>
             <ul class="list-group list-group-flush padding">
-              <li class="list-group-item">ID: <span>${id}</span></li>
-              <li class="list-group-item">Email: <span>${email}</span></li>
-              <li class="list-group-item"><span>${extraType}: </span><span>${extra}</span></li>
+              <li class="list-group-item">ID: <span>69</span></li>
+              <li class="list-group-item">Email: <span>ashley@ashleyisgr8.net</span></li>
+              <li class="list-group-item"><span>Office Number: </span><span>420</span></li>
             </ul>
-          </div>`
-
-          return card
-        }
-
-    console.log("In generate", data);
-    data.forEach(element => {
-        if (element instanceof Manager) {
-            
-            console.log("One is a manager");
-            let pClass = "manager"
-            let extraType = "Office Number"
-            let card = makeEmployeeCard(element.getName(), element.getId(), element.getEmail(), element.getRole(), pClass, extraType, element.getOfficeNumber())
-
-            teamHTML += card
-
-        } else if (element instanceof Intern) {
-            
-            console.log("One is an intern");
-            let pClass = "intern"
-            let extraType = "School"
-            let card = makeEmployeeCard(element.getName(), element.getId(), element.getEmail(), element.getRole(), pClass, extraType, element.getSchool())
-
-            teamHTML += card
-
-        } else if (element instanceof Engineer) {
-          
-            console.log("One is an engineer")
-            let pClass = "engineer"
-            let extraType = "Github"
-            let card = makeEmployeeCard(element.getName(), element.getId(), element.getEmail(), element.getRole(), pClass, extraType, element.getGithub())
-
-            teamHTML += card
-        }
-    });
-
-    let lastBit = `</section>
+          </div><div class="card" style="width: 18rem;">
+            <div class="card-header">
+              Rhyce
+              <br>
+              <span class="engineer"> Engineer</span>
+            </div>
+            <ul class="list-group list-group-flush padding">
+              <li class="list-group-item">ID: <span>96</span></li>
+              <li class="list-group-item">Email: <span>a.r.erickson.28@gmail.com</span></li>
+              <li class="list-group-item"><span>Github: </span><span>arerickson28</span></li>
+            </ul>
+          </div><div class="card" style="width: 18rem;">
+            <div class="card-header">
+              Momo
+              <br>
+              <span class="intern"> Intern</span>
+            </div>
+            <ul class="list-group list-group-flush padding">
+              <li class="list-group-item">ID: <span>23</span></li>
+              <li class="list-group-item">Email: <span>momo@avatar.bending</span></li>
+              <li class="list-group-item"><span>School: </span><span>Air Bending Academy: Lemur division</span></li>
+            </ul>
+          </div></section>
     </body>
-    </html>`
-
-    teamHTML += lastBit
-
-    return teamHTML;
-}
-
-
-module.exports = generateHTML
+    </html>

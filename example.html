@@ -30,12 +30,33 @@
 
         .card {
             margin: 25px ;
+            background-color: lightslategray;
         }
 
         .card-header {
             height: 100px ;
             background-color: cornflowerblue;
             color: white ;
+            font-size: x-large;
+        }
+
+        .manager::before {
+          content: "☕"
+        }
+
+        .intern::before {
+          content: "🎓"
+        }
+
+        .engineer::before {
+          content: "👓"
+        }
+
+        .padding {
+          margin-top: 25px ;
+          margin-bottom: 25px ;
+          margin-left: 10px ;
+          margin-right: 10px ;
         }
 
     </style>
@@ -51,11 +72,13 @@
     <div class="card" style="width: 18rem;">
         <div class="card-header">
           Team Member
+          <br>
+          <span class="engineer" id="roleOne"> Manager</span>
         </div>
-        <ul class="list-group list-group-flush">
+        <ul class="list-group list-group-flush padding">
           <li class="list-group-item">ID: <span id="idOne"></span></li>
           <li class="list-group-item">Email: <span id="emailOne"></span></li>
-          <li class="list-group-item"><span id="roleOne"></span></li>
+          <li class="list-group-item"><span id="extra1">Office Number: </span><span>1</span></li>
         </ul>
       </div>
 
