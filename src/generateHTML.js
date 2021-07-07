@@ -1,6 +1,6 @@
-const Engineer = require("./engineer");
-const Intern = require("./intern");
-const Manager = require("./manager");
+const Engineer = require("../lib/engineer");
+const Intern = require("../lib/intern");
+const Manager = require("../lib/manager");
 
 
 

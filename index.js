@@ -1,10 +1,10 @@
 const inquirer = require("inquirer") ;
 const fs = require("fs") ;
-const Employee = require("./employee") ;
-const Manager = require("./manager") ;
-const Engineer = require("./engineer") ;
-const Intern = require("./intern") ;
-const generateHTML = require("./generateHTML") ;
+const Employee = require("./lib/employee.js") ;
+const Manager = require("./lib/manager.js") ;
+const Engineer = require("./lib/engineer.js") ;
+const Intern = require("./lib/intern.js") ;
+const generateHTML = require("./src/generateHTML.js") ;
 
 // let myEngineer = new Engineer("Rhyce", "47", "a.r.erickson.28@gmail.com", "arerickson28") ;
 
